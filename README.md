@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Screenshot -Cart-Vite React.png)
+![](./Screenshot.png)
 
 
 
