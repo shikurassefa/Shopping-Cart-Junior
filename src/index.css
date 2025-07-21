@@ -17,6 +17,7 @@ ul {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 body {
   font-family: "Figtree", sans-serif;
@@ -113,8 +114,7 @@ display: flex;
 align-items: center;
 justify-content: space-between;
  border-radius: 22px;
-
-  position: absolute;
+ position: absolute;
   bottom: -15px;
 
 }

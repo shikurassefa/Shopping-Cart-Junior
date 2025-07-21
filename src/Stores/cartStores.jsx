@@ -9,7 +9,7 @@ confirm: false,
 isClicked: false,
 handleNewOrder:()=>
 {
-set((state)=>
+set(()=>
 {
   return {cart:[]}
 })
@@ -45,16 +45,15 @@ set((state)=>
 })
 }
 ,
-      addToCart: (name,id,price,category,image) => {
+      addToCart: (id,name,price,category,image) => {
       
        
         set((state) => {
           const itemExists = state.cart.find((item) => {
-            // check if the item already exists in the cart
-            // if it does, return the item
+          
             return item.id === id;
           });
-          // first case:itemExists is false
+      
           if (itemExists) {
             return {
               cart: state.cart.map((item) => {
@@ -69,10 +68,8 @@ set((state)=>
             };
           } else {
             return {
-              cart: [...state.cart, {name,id,price,category,image,quantity:1}]
-              // cart:[{name: waffle with berries,id:0,price:$6.50,category:waffle,quantity:1}]
-               // cart:[{name: waffle with berries,id:0,price:$6.50,category:waffle,quantity:2}]
-                // cart:[{name: creme brullle,id:1,price:$7.0,category:vanila creme brulle,quantity:1}]
+              cart: [...state.cart, {id,name,price,category,image,quantity:1}]
+            
             };
           }
         });
